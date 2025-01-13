@@ -1,20 +1,15 @@
 import React from 'react';
-import logoSymbol from '../assets/images/logo-symbol.png';
-import logoFull from '../assets/images/logo-full.png';
+import { useLanguage } from '../context/LanguageContext';
 
 export function Logo() {
+  const { language } = useLanguage();
+  
   return (
     <div className="flex items-center">
-      <img 
-        src={logoSymbol} 
-        alt="Integrisecur Logo" 
-        className="h-10 w-10"
-      />
-      <img 
-        src={logoFull} 
-        alt="Integrisecur" 
-        className="h-8 ml-3 hidden md:block"
-      />
+      <span className="text-2xl font-bold text-[#003366]">Integrisecur</span>
+      <span className="text-sm text-gray-500 ml-2">
+        {language === 'en' ? 'Secure Reporting' : 'Signalement Sécurisé'}
+      </span>
     </div>
   );
 }

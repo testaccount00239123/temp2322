@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronUp, ChevronDown } from 'lucide-react';
 
 export function FAQList() {
   const { language } = useLanguage();

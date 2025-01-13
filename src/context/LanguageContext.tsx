@@ -9,7 +9,6 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  // Set French as the default language
   const [language, setLanguage] = useState<Language>('fr');
 
   return (

@@ -1,9 +1,10 @@
 import React from 'react';
-import { useLanguage } from '../../context/LanguageContext';
+import { useLanguage } from '../../context/LanguageContext.js';
+import { Language } from '../../types/language.js';
 import { TrendingUp, Shield, Users, Scale, Award, Clock } from 'lucide-react';
 
 export function BenefitsList() {
-  const { language } = useLanguage();
+  const { language } = useLanguage() as { language: Language };
 
   const benefits = [
     {
